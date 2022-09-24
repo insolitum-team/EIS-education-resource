@@ -1,3 +1,7 @@
 from django.shortcuts import render
+import datetime
 
-# Create your views here.
+
+def index(request):
+	year = datetime.date.today().year
+	return render(request, 'eis/index.html', {'year': year})
