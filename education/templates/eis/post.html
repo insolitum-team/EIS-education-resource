@@ -1,0 +1,31 @@
+{% extends 'eis/base.html' %}
+{% block content %}
+    <div style="text-align: center;">
+        <h1 style="font-weight: 600; font-family: 'Newsreader', serif;">{{ post.title }}</h1>
+        <h4 style="font-family: 'Newsreader', serif;" class="text-muted">{{ post.subtitle }}</h4><br>
+        <hr style="
+        background-color: white;
+        height: 8px;
+        border-bottom: 1px solid;
+        opacity: .25; border-left: 0;
+        border-right: 0;
+        border-top: 3px solid;">
+        <p style="font-family: 'Newsreader', serif; text-align: center;" class="text-muted">{{ post.date }}</p>
+        <hr style="
+        background-color: white;
+        height: 8px;
+        border-bottom: 3px solid;
+        opacity: .25; border-left: 0;
+        border-right: 0;
+        border-top: 1px solid;">
+    </div>
+    <div style="font-size: 1.1rem">
+        <br>{{ post.body | safe}}<br><hr style="
+        background-color: white;
+        height: 8px;
+        border-bottom: 3px solid;
+        opacity: .25; border-left: 0;
+        border-right: 0;
+        border-top: 1px solid;">
+    </div>
+{% endblock %}
