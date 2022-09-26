@@ -1,6 +1,21 @@
 {% extends 'eis/base.html' %}
 {% block content %}
-    {% for post in posts %}
-    {{ post }};
-    {% endfor %}
+    {% if posts %}
+        {% for post in posts %}
+        <br><div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{ post }}</h5>
+            <p class="card-text">{{ post.subtitle }}</p>
+            <p class="card-text text-muted">{{ post.date }}</p>
+          </div>
+            <div class="card-footer text-muted">
+                <a href="{% url 'post' post.id %}" class="btn btn-outline-dark">Читать</a>
+            </div>
+        </div><br>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-dark" role="alert">
+          По вашему запросу ничего не найдено
+        </div>
+    {% endif %}
 {% endblock %}
