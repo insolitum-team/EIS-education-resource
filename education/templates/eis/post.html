@@ -1,31 +1,58 @@
-{% extends 'eis/base.html' %}
-{% block content %}
-    <div style="text-align: center;">
-        <h1 style="font-weight: 600; font-family: 'Newsreader', serif;">{{ post.title }}</h1>
-        <h4 style="font-family: 'Newsreader', serif;" class="text-muted">{{ post.subtitle }}</h4><br>
-        <hr style="
-        background-color: white;
-        height: 8px;
-        border-bottom: 1px solid;
-        opacity: .25; border-left: 0;
-        border-right: 0;
-        border-top: 3px solid;">
-        <p style="font-family: 'Newsreader', serif; text-align: center;" class="text-muted">{{ post.date }}</p>
-        <hr style="
-        background-color: white;
-        height: 8px;
-        border-bottom: 3px solid;
-        opacity: .25; border-left: 0;
-        border-right: 0;
-        border-top: 1px solid;">
-    </div>
-    <div style="font-size: 1.1rem">
-        <br>{{ post.body | safe}}<br><hr style="
-        background-color: white;
-        height: 8px;
-        border-bottom: 3px solid;
-        opacity: .25; border-left: 0;
-        border-right: 0;
-        border-top: 1px solid;">
-    </div>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EIS</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+{% include 'eis/navbar.html' %}
+      <header class="masthead" style="background-color: #000; color: #fff; margin-bottom:30px;">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-heading">
+                        <h1>{{ post.title }}</h1>
+                        <h2 class="subheading">{{ post.subtitle }}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    {{ post.body | safe }}
+                    {{ post.date }}
+                </div>
+            </div>
+        </div>
+    </article>
+<footer class=" text-center text-white" style="background-color:#111;">
+	<div class="container p-4" style="background-color:#111;">
+	  <section class="mb-4">
+		<p>
+		  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+		  distinctio earum repellat quaerat voluptatibus placeat nam,
+		  commodi optio pariatur est quia magnam eum harum corrupti dicta,
+		  aliquam sequi voluptate quas.
+		</p>
+	  </section>
+	</div>
+	<div class="text-center p-3" style="background-color: #111">
+	  <h6 class="text-muted">
+            Powered by Insolitum team
+            <a style="text-decoration: none; color: black;" href="https://t.me/KachestvennayKarta" class="footer-a">@ImmortalDante</a>
+            & <a style="text-decoration: none; color: black;" href="https://t.me/esquiresword">@esquiresword</a>
+            & <a style="text-decoration: none; color: black;" href="https://t.me/keepitsilet">@SidVerson</a>
+        </h6>
+	</div>
+</footer>
+<script src="static/css/font-awesome/css/main.js"></script>
+<script src="static/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

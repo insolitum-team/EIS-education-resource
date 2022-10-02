@@ -2,24 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>EIS</title>
+    <link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="static/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
 {% include 'eis/navbar.html' %}
 <br>
 <div class="container">
     {% block content %}{% endblock %}<br>
-    <div style="text-align: center;">
-        <br><h6 class="text-muted">Powered by metaBSUIR team <a style="text-decoration: none; color: black;" href="https://t.me/KachestvennayKarta" class="footer-a">@ImmortalDante</a> & <a style="text-decoration: none; color: black;" href="https://t.me/esquiresword">@esquiresword</a></h6>
-        <h6 class="text-muted"><i class="fa-regular fa-copyright"></i> {{ year }}</h6>
-        <h6 class="text-muted">P.S. We are not frontenders <i class="fa-regular fa-face-frown"></i></h6><br>
-    </div>
 </div>
-<script src="https://kit.fontawesome.com/e6d46ea50c.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<footer class=" text-center text-white" style="background-color:#111;">
+	<div class="container p-4" style="background-color:#111;">
+	  <section class="mb-4">
+		<p>
+		  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+		  distinctio earum repellat quaerat voluptatibus placeat nam,
+		  commodi optio pariatur est quia magnam eum harum corrupti dicta,
+		  aliquam sequi voluptate quas.
+		</p>
+	  </section>
+	</div>
+	<div class="text-center p-3" style="background-color: #111">
+	  <h6 class="text-muted">
+            Powered by Insolitum team
+            <a style="text-decoration: none; color: black;" href="https://t.me/KachestvennayKarta" class="footer-a">@ImmortalDante</a>
+            & <a style="text-decoration: none; color: black;" href="https://t.me/esquiresword">@esquiresword</a>
+            & <a style="text-decoration: none; color: black;" href="https://t.me/keepitsilet">@SidVerson</a>
+        </h6>
+	</div>
+</footer>
+<script src="static/css/font-awesome/css/main.js"></script>
+<script src="static/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>

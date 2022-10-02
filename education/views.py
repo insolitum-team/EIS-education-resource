@@ -4,7 +4,6 @@ from .date_functions import YEAR
 
 
 def index(request):
-
 	posts = PostModel.objects.all().order_by('-date')
 	return render(request, 'eis/index.html', {
 		'year': YEAR,
