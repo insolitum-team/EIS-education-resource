@@ -5,8 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>EIS</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css">
+    {% load static %}
+	<link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.css' %}">
 </head>
 <body>
 {% include 'eis/navbar.html' %}
@@ -14,7 +14,7 @@
         <div class="container position-relative px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    <div class="post-heading">
+                    <div class="post-heading" style="display:flex; align-items:center; flex-direction:column;">
                         <h1>{{ post.title }}</h1>
                         <h2 class="subheading">{{ post.subtitle }}</h2>
                     </div>
@@ -32,7 +32,7 @@
             </div>
         </div>
     </article>
-<footer class=" text-center text-white" style="background-color:#111;">
+<footer class=" text-center text-white " style="background-color:#111;">
 	<div class="container p-4" style="background-color:#111;">
 	  <section class="mb-4">
 		<p>
@@ -46,13 +46,13 @@
 	<div class="text-center p-3" style="background-color: #111">
 	  <h6 class="text-muted">
             Powered by Insolitum team
-            <a style="text-decoration: none; color: black;" href="https://t.me/KachestvennayKarta" class="footer-a">@ImmortalDante</a>
-            & <a style="text-decoration: none; color: black;" href="https://t.me/esquiresword">@esquiresword</a>
-            & <a style="text-decoration: none; color: black;" href="https://t.me/keepitsilet">@SidVerson</a>
+            <a style="text-decoration: none; color: #6c756d;" href="https://t.me/KachestvennayKarta" class="footer-a">@ImmortalDante</a>
+            & <a style="text-decoration: none; color: #6c756d;" href="https://t.me/esquiresword">@esquiresword</a>
+            & <a style="text-decoration: none; color: #6c756d;" href="https://t.me/keepitsilet">@SidVerson</a>
         </h6>
 	</div>
 </footer>
 <script src="static/css/font-awesome/css/main.js"></script>
-<script src="static/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/education/static/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>
